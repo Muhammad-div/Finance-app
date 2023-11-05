@@ -2,7 +2,7 @@ import { useState } from "react";
 // import { Link } from "react-router-dom";
 import PixIcon from "@mui/icons-material/Pix";
 import { Box, Typography, useTheme } from "@mui/material";
-import FlexBetween from "dashboard/src/components/FlexBetween";
+import FlexBetween from "dashboard/components/FlexBetween";
 
 type Props = {};
 

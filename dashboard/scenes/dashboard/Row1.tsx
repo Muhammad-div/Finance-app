@@ -4,7 +4,7 @@
 import { useTheme } from "@mui/material";
 // import BoxHeader from "./components/BoxHeader";
 // import DashboardBox from "./components/DashboardBox";
-import { useGetKpisQuery } from "dashboard/state/api";
+// import { useGetKpisQuery } from "dashboard/state/api";
 import { useMemo } from "react";
 import {
   ResponsiveContainer,
@@ -20,8 +20,9 @@ import {
   Tooltip,
   Area,
 } from "recharts";
-import BoxHeader from "dashboard/src/components/BoxHeader";
-import DashboardBox from "dashboard/src/components/DashboardBox";
+import BoxHeader from "dashboard/components/BoxHeader";
+import DashboardBox from "dashboard/components/DashboardBox";
+import { useGetKpisQuery } from "dashboard/state/api";
 
 const Row1 = () => {
   const { palette } = useTheme();

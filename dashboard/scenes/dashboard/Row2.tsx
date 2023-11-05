@@ -1,7 +1,7 @@
-import BoxHeader from "dashboard/src/components/BoxHeader";
-import DashboardBox from "dashboard/src/components/DashboardBox";
+import BoxHeader from "dashboard/components/BoxHeader";
+import DashboardBox from "dashboard/components/DashboardBox";
 // import FlexBetween from "dashboard/components/FlexBetween";
-import { useGetKpisQuery, useGetProductsQuery } from "dashboard/state/api";
+// import { useGetKpisQuery, useGetProductsQuery } from "dashboard/state/api";
 import { Box, Typography, useTheme } from "@mui/material";
 import React, { useMemo } from "react";
 import {
@@ -19,7 +19,8 @@ import {
   Scatter,
   ZAxis,
 } from "recharts";
-import FlexBetween from "dashboard/src/components/FlexBetween";
+import FlexBetween from "dashboard/components/FlexBetween";
+import { useGetKpisQuery, useGetProductsQuery } from "dashboard/state/api";
 
 const pieData = [
   { name: "Group A", value: 600 },

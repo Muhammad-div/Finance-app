@@ -1,6 +1,6 @@
-import BoxHeader from "dashboard/src/components/BoxHeader";
-import DashboardBox from "dashboard/src/components/DashboardBox";
-import FlexBetween from "dashboard/src/components/FlexBetween";
+import BoxHeader from "dashboard/components/BoxHeader";
+import DashboardBox from "dashboard/components/DashboardBox";
+import FlexBetween from "dashboard/components/FlexBetween";
 import {
   useGetKpisQuery,
   useGetProductsQuery,
