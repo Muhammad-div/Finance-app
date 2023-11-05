@@ -1,35 +1,35 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { format, parseISO } from 'date-fns'
-import { allPosts } from 'contentlayer/generated'
-import { NextPage } from 'next'
+import Head from "next/head";
+import Link from "next/link";
+// import { format, parseISO } from "date-fns";
+// import { allPosts } from "contentlayer/generated";
+import { NextPage } from "next";
 
-import { useMDXComponent } from 'next-contentlayer/hooks'
+// import { useMDXComponent } from "next-contentlayer/hooks";
 
-export async function getStaticPaths() {
-  const paths = allPosts.map((post) => post.url)
-  return {
-    paths,
-    fallback: false,
-  }
-}
+// export async function getStaticPaths() {
+//   const paths = allPosts.map((post) => post.url);
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps({ params }) {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
-  return {
-    props: {
-      post,
-    },
-  }
-}
+// export async function getStaticProps({ params }) {
+//   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+//   return {
+//     props: {
+//       post,
+//     },
+//   };
+// }
 
 const PostLayout: NextPage = ({ post }: any) => {
-  const MDXContent = useMDXComponent(post.body.code)
+  // const MDXContent = useMDXComponent(post.body.code);
 
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>test blog title</title>
       </Head>
       <article className="mx-auto max-w-2xl py-16">
         <div className="mb-6 text-center">
@@ -40,17 +40,20 @@ const PostLayout: NextPage = ({ post }: any) => {
           </Link>
         </div>
         <div className="mb-6 text-center">
-          <h1 className="mb-1 text-3xl font-bold">{post.title}</h1>
-          <time dateTime={post.date} className="text-sm text-slate-600">
-            {format(parseISO(post.date), 'LLLL d, yyyy')}
-          </time>
+          <h1 className="mb-1 text-3xl font-bold">test head</h1>
+          {/* <time dateTime={post.date} className="text-sm text-slate-600"> */}
+          <span className="text-sm text-slate-600">
+            {/* {format(parseISO(post.date), 'LLLL d, yyyy')} */}
+            test
+          </span>
         </div>
         <div className="cl-post-body">
-          <MDXContent />
+          {/* <MDXContent /> */}
+          test
         </div>
       </article>
     </>
-  )
-}
+  );
+};
 
-export default PostLayout
+export default PostLayout;
