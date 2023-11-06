@@ -24,7 +24,8 @@ export const store = configureStore({
 setupListeners(store.dispatch);
 
 function MainDash() {
-  const theme = useMemo(() => createTheme(themeSettings));
+  // const theme = useMemo(() => createTheme(themeSettings));
+  const theme = useMemo(() => createTheme(themeSettings), []);
   const router = useRouter(); // Initialize the router
 
   // Check if the token is available in local storage
